@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Import Rabbit Hole</title>
+  <script>
+  if (localStorage.getItem('invert')){document.documentElement.classList.add('it')}
+  </script>
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+</head>
+<body>
+
+<main>
+  <h1>Look in the console</h1>
+</main>
+
+<!--
+  Trying to use the `./badness.js` script
+  fails with the following error:
+
+  Uncaught SyntaxError: The requested module './sadness.js' does not provide an export named 'default' (at badness.js:6:8)
+ -->
+<script src="./badness.js" type="module" async></script>
+<script src="./main.js" type="module" async></script>
+<script src="./lame.js" nomodule></script>
+</body>
+</html>

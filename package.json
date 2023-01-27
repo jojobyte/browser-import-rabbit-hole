@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "npx sirv-cli -p 5453 . -D",
+    "cli": "node ./cli.js",
+    "clim": "node ./cli.mjs",
+    "bun:start": "bunx sirv-cli -p 5453 . -D",
+    "bun:cli": "bun run ./cli.js"
+  }
+}
